@@ -1,0 +1,41 @@
+name: その他 / General
+description: Bug / Feature / Question 以外の相談・連絡用
+title: "[Other] 簡単なタイトル"
+labels:
+  - from-booth
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ℹ️ **注意: このリポジトリのアセットは個人開発・無保証です。**
+        分類に迷った場合や、軽い連絡事項などはこちらに書いてください。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 内容
+      description: 相談したいこと・伝えたいことを自由に書いてください
+      placeholder: |
+        例:
+        - BugでもFeatureでもないけど気になった点
+        - こういう使い方をしても問題ないかの確認
+        - その他、連絡事項 など
+    validations:
+      required: true
+
+  - type: textarea
+    id: asset_info
+    attributes:
+      label: 関連するアセット情報（あれば）
+      description: 関係しそうなアセット名やBooth URLがあれば書いてください
+      placeholder: 特定のアセットに関係する場合のみ、分かる範囲でお願いします
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 確認事項
+      options:
+        - label: このアセットが「基本的に無保証」であることを理解しています
+          required: true
