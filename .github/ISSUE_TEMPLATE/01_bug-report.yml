@@ -1,0 +1,86 @@
+name: 不具合報告 / Bug report
+description: Boothで配布しているアセットの不具合報告はこちら
+title: "[Bug] アセット名: 簡単なタイトル"
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🚨 **注意: このリポジトリで配布しているアセットは基本的に無保証です。**
+        不具合報告をいただいても、必ず修正されることを保証するものではありません。
+
+  - type: input
+    id: asset_name
+    attributes:
+      label: 対象アセット名
+      description: Boothの商品名を入力してください
+      placeholder: 例) 【無料】 ペンキ風テクスチャ
+    validations:
+      required: true
+
+  - type: input
+    id: asset_url
+    attributes:
+      label: Boothの商品URL
+      description: 該当商品のBooth URLを貼ってください
+      placeholder: https://raccoon-tail.booth.pm/items/6219384
+    validations:
+      required: true
+
+  - type: textarea
+    id: env
+    attributes:
+      label: 利用環境
+      description: 分かる範囲で埋めてください（Unity / VRChatのバージョン、PC/Quest など）
+      placeholder: |
+        例:
+        - Unity: 2022.3.XX
+        - VRChat: Live / Open Beta
+        - プラットフォーム: PCVR / Desktop / Quest
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 起きている問題
+      description: 何が起きているか、できるだけ具体的に書いてください
+      placeholder: |
+        - 期待した動作:
+        - 実際の動作:
+        - 表示されたエラーメッセージ（あれば）:
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 手順が分かれば、箇条書きで書いてください
+      placeholder: |
+        1. Unityでプロジェクトを開く
+        2. AvatarにPrefabを追加する
+        3. Playモードで再生する
+        4. 〇〇のときにエラーが出る
+    validations:
+      required: false
+
+  - type: textarea
+    id: attachment
+    attributes:
+      label: 補足情報
+      description: スクリーンショットやログなど、公開しても問題ない範囲で追記してください
+      placeholder: 何かあれば自由にどうぞ
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 確認事項
+      options:
+        - label: このアセットが「基本的に無保証」であることを理解しています
+          required: true
+        - label: 公開したくない情報（個人情報・クローズドなワールド情報など）は含めていません
+          required: true
