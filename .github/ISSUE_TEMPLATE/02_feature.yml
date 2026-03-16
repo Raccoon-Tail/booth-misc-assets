@@ -1,0 +1,71 @@
+name: 機能追加・改善要望 / Feature request
+description: Boothで配布しているアセットへの機能追加・改善の提案はこちら
+title: "[Feature] アセット名: やりたいことの一言"
+labels:
+  - enhancement
+  - from-booth
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ℹ️ **注意: このリポジトリのアセットは個人開発・無保証です。**
+        すべての要望に対応できるとは限りませんが、今後の参考にさせていただきます。
+
+  - type: input
+    id: asset_name
+    attributes:
+      label: 対象アセット名
+      description: Boothの商品名を入力してください(分かる範囲でOKです)
+      placeholder: 例)【無料】 ペンキ風テクスチャ
+    validations:
+      required: true
+
+  - type: input
+    id: asset_url
+    attributes:
+      label: Boothの商品URL
+      description: 該当商品のBooth URLを貼ってください
+      placeholder: https://raccoon-tail.booth.pm/items/6219384
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-you-want
+    attributes:
+      label: どんな機能・改善が欲しいか
+      description: やりたいこと・欲しい動作をざっくり書いてください
+      placeholder: |
+        例:
+        - このギミックをQuestにも対応してほしい
+        - メニューからON/OFFできるトグルが欲しい
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: なぜそれが欲しいか
+      description: 困っていること・ユースケースなどがあれば教えてください
+      placeholder: |
+        例:
+        - 〇〇なシチュエーションで毎回手動で設定していて手間だから
+        - 配布ワールドで使う予定があり、他の人にも分かりやすくしたい など
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 補足情報
+      description: 参考になりそうな情報があれば自由に書いてください
+      placeholder: 似たようなアセットやイメージがあればURLなど
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 確認事項
+      options:
+        - label: このアセットが「基本的に無保証」であることを理解しています（採用されない可能性もあります）
+          required: true
