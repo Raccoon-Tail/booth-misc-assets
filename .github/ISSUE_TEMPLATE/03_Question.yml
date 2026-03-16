@@ -1,0 +1,59 @@
+name: 質問 / Question
+description: 使い方や設定方法などの質問はこちら
+title: "[Question] アセット名: 簡単なタイトル"
+labels:
+  - question
+  - from-booth
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ℹ️ **注意: このリポジトリのアセットは個人開発・無保証です。**
+        できる範囲で回答しますが、返信や対応をお約束するものではありません。
+
+  - type: input
+    id: asset_name
+    attributes:
+      label: 対象アセット名
+      description: Boothの商品名を入力してください
+      placeholder: 例) 【無料】 ペンキ風テクスチャ
+    validations:
+      required: true
+
+  - type: input
+    id: asset_url
+    attributes:
+      label: Boothの商品URL
+      description: 該当商品のBooth URLを貼ってください
+      placeholder: https://raccoon-tail.booth.pm/items/6219384
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容
+      description: 知りたいことを具体的に書いてください
+      placeholder: |
+        例:
+        - プレハブのどのパラメータを触ればいいか知りたい
+        - 〇〇環境でも使えるかどうか確認したい など
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景・用途
+      description: どんな用途で使おうとしているか、分かる範囲で書いてください
+      placeholder: ワールド・アバター・配信など、ざっくりでOKです
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 確認事項
+      options:
+        - label: このアセットが「基本的に無保証」であることを理解しています
+          required: true
